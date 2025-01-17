@@ -17,3 +17,12 @@ Note: we can have only one deafult export in a file.
 ES6 : module  => react 
 common js : node js => but node js module
 
+
+
+=====================================
+
+
+//Hello this is new entry
+
+=====================================
+
