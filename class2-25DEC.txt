@@ -1,0 +1,129 @@
+https://meet.google.com/rdb-dwdp-bdr
+
+Javascript  =>  client side script which run on browser engines . 
+
+1. Varibale: To store any data in temp memory
+   JS => Three way
+        var 
+        let 
+        const 
+
+        Example: 
+         var x=10; 
+         let y=10;
+         const z=10;
+
+         Difference between  var , Let , const
+
+         var x=10;
+         var x=20;
+             x=40;
+
+         let y=10;
+         let y=20; // error
+             y=30; // correct
+
+        const z=30; 
+        const z=40;// error
+              z=70; // correct
+
+==================================================
+Let and Const is block scope variable
+=================================================
+        let y=10;
+              {
+                  let y=20;
+                  console.log(y)
+
+              }
+        console.log(y)
+        console.warn('djsxnsjk');
+
+
+============================================== 
+ JS is Dynamically typed language : A/c to the value
+
+ of varibale it will decide it's datatype.
+
+
+let x=10;   // Number
+    x='This is javascript" // string
+
+let x2= 2.0; // Number
+
+let y ="Heggggg"; // string
+
+let z=true ;  // boolean
+
+let data=null // dataype=> null
+
+undefined
+
+
+
+let test;
+
+console.log('test');//test
+console.log(test); // undefined
+
+Note: undefined is also a dataype in javacsipt , when we declare a variable and not defined it's value in that case if we want to fetch that varibale we will get undefined.
+
+
+console.log(p);//  not defined  => This is refernce error.
+
+Note: Undefined is a datatype while notdefined is error.
+
+
+================================================
+
+let data=null  // datatype => null 
+console.log(data) // null 
+        
+=============
+
+Datatype:  
+   Primitive => Number, Boolean, String, undefined ,null
+   Complex =>Object
+
+
+let count=20; // number 
+
+We can find the datatype of any variable using typeof function
+
+console.log(typeof(count))
+
+
+==================================
+
+Test:
+
+console.log(typeof(''))//string
+==========================================
+
+Complex datatype:  Object 
+  
+  In Object you have to define it's properties.
+
+let person={
+     name:'Akash',
+     mobile:821020677,
+     age:25,
+     address:'patna'
+}
+
+// Here person is object and name, mobile,age,address is it's properties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

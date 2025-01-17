@@ -1,0 +1,126 @@
+
+Error:
+   Syntax error :
+       console.log('sdd');
+
+   Runtime error: 
+        
+        Exception Handling:  Error which occurs during the 
+                            execution of the program due to some 
+                            inavlid input , function , variables called Execption.
+
+                            And to handle this Exception  we use try and catch features.
+
+
+            try{
+               // your business logic 
+            }catch(error){
+               // if error come handle the error .
+
+            }finally{
+               this block execute either execption arise or not 
+            } 
+
+            body={
+            
+           let {username}=body
+               data:{
+                usernmae:'raj',
+                password:'123'
+               }
+            }
+
+    function login_api(req){
+        try{
+              let {
+                username,
+                password
+              }= req.body
+
+              const weatherinfo=thirdpartyapi_checkweathinfo(lat,long)
+                
+                res.send(weathinfo.timezone);
+              if(user!=='' && password!==''){
+                   if(user=='raj' and password=='123'){
+                     res.send('successfully loggedin',200);
+                   }else{
+                    res.send('Wrong username and password',400);
+                   }
+              }
+        }catch(err){
+            logger.log('ERROR',err.message);
+            res.send('Something went wrong',500);
+        }
+    }              
+
+============================================
+
+Callback Function: 
+Callback function is the feature
+of javascript where you pass a function as argument
+to another function.
+
+    for exmaple:
+
+       function SayHello(name,callback){
+        let output=`Hello your name is : ${name}`;
+        callback(output) // calling of callbackfunction
+       }
+
+       function SayBye(output){
+        console.log(output)
+       }
+
+       SayHello('Saurav',SayBye)// here we pass SayBye function as argument 
+
+Benifit of callback function:
+=============================
+
+Benifit of callback function is that you can wait for the result of previous
+function call and then execute another function call.
+
+Example:
+// Without callback
+function fn1(){
+    console.log('hello i am a function1')
+}
+
+function fn2(name){
+    console.log(name)
+}
+
+//function call
+setTimeout(fn1,2500);
+fn2('saurav')
+
+Output:
+saurav
+hello i am function1
+
+=====//with callback==== 
+
+function fn1(name,callback){
+    console.log('hello i am function1');
+    callback(name)
+}
+
+function fn2(name){
+    console.log('hello'+name)
+}
+
+//calling the function after 2.5 second 
+
+setTimeout(fn1,2500,'saurav',fn2)// here we are callinf fn1 function after 2.5 sec 
+          and we pass two argument name and fn2 function 
+          as argument of fn1 function.
+//syntax of setTimeout(function , time , arg1,arg2)
+
+output:
+hello i am function1
+saurav
+
+
+Note: In second example we can by the help of callback function
+     execution of second function untill first function is 
+     executed i.e after 2.5 sec first function execute then next function execute.
+

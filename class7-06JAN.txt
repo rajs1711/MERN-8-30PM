@@ -1,0 +1,140 @@
+Spread operator
+===============
+...=> use to expand or spread elements of array , object and string.
+
+Example:
+
+let list1=[22,78,89,40];
+console.log(list1[0],list1[1],list1[2],list1[3]) // old style
+output : 22,78,89,40
+console.log(...list1) // console using spread operator
+output : 22,78,89,40
+
+Note: it gives more readability and concisness in code.
+
+
+=======Array Merge suing spread opearator====
+
+let class1=['Amit','Prince','Khusi'];
+let class2=['Raj','Suraj'];
+
+let student=[];
+
+//ouptput should  be  : ['Amit','Prince','Khusi','Raj','Suraj'];
+
+student=[...class1,..class2];
+console.log(student)
+
+=======Use of Spread opearor on Object======
+let user1={
+    name:'saurav',
+    address:'patna',
+    pincode:801505
+}
+let user2={
+    name:Prince',
+    address:'Hajipur'
+}
+
+let merge_user={...user1,...user2}
+console.log(merge_user);
+output:{name: 'Prince', address: 'Hajipur', pincode: 90900}
+
+
+spread array and send to function 
+
+
+let fn= function(d1,d2){
+   console.log(`${d1} ${d2}`)
+}
+
+let myarray=[10,40,50]
+fn(...myarray)  // here we pass spreaded array in multiple
+                parameter of function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+========== Rest Opeartor =======
+
+Note: when we use spread operator as parameter of any 
+      function then we call that rest operator.
+
+    Example:
+
+    let showstudent= function(...student_name){
+        console.log(`Student Name : ${student_name}`)
+    }
+
+    showstudent('Amit','sura','ajit')
+    showstudent('Amit')
+    showstudent('Amit','sura')
+
+    Note: By the help of rest parameter  in function we can
+         accept  multiple values in single  parameter.
+
+
+===============
+ Here we pass a array in  a function which
+ accept array in rest parameter 
+
+let fn= function(...data){
+   console.log(...data) // print using spread
+}
+
+let myarray=[10,40,50]
+fn(...myarray)
+
+
+===================================
+
+Deafult parameter
+
+function test(n=5){
+    console.log(n)
+}
+test(7)  // 7
+test()  // 5 
+
+while calling the function if we pass the value of 
+parameter it will accept that value otherwise it will
+print the deafult one.
+
+==================================
+
+use of normal parameter , deafult paramenter and rest parameter at a time 
+
+function test1(name , email , country='India',...others){
+    console.log(name)
+    console.log(email)
+    console.log(country)
+    console.log(...others)
+}
+let name='Saurav';
+let email='srv@gmail.com';
+let other_info={
+    pin:909090,
+    state:'Bihar'
+}
+
+test1(name,email,other_info)
+
+=Output:
+Saurav
+srv@gmail.com
+India
+{pin: 909090, state: 'Bihar', country: 'India'}
+
+ 
+
+
+

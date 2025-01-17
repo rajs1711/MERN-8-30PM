@@ -1,0 +1,94 @@
+Destrcuturing:
+
+This is one of the important features of ES6 which helps 
+us make assignemnt to variables from array or from object in easy way.
+
+Example:
+  
+  const user={
+     name:'saurav',
+     gender:'M',
+     email:'abc@gmail.com'
+  }
+
+old style to assign object properties to variables:
+
+  let name=user.name;
+  let gender=user.gender;
+  let email=user.email;
+
+  console.log(name,gender,email)
+
+  ES6:
+
+  let {name , gender,email }=user // Destrcuturing
+  console.log(name,gender,email)
+
+  Note: while destructuring your object ,Variable name should be same as object property.
+        sequence of variable doesn't matter .
+
+===============
+Different variable name while destructure your object property
+
+let {name:name1,gender:gender1,email:email1}=user
+console.log(name1,gender1,email1)
+
+Note: here we use different variable name like name1.....
+
+=============================================
+Destructure nested object 
+
+const user={
+    name:'saurav',
+    gender:'M',
+    address:{
+        permanent:'patna',
+        temporary:'Delhi'
+    }
+}
+
+Old style
+console.log(user.address.permanent)
+
+ES6:
+ const{name,gender,address:{permanent,temporary}}=user
+ console.log(name,gender,permanent,temporary);
+
+ skip property of object while destructuring :
+  const{name,address:{permanent,temporary}}=user
+  ouput: 
+  saurav, patna and delhi
+
+======================
+
+Passing Default value during object destructuring 
+
+const user={
+    name:'saurav'
+}
+
+const { name , age=null }=user
+console.log(name,age) // saurav
+
+
+======================================
+Array destructuring :
+======================================
+let arr=['first','second','third'];
+const [v1,v2,v3]=arr  // destructure
+console.log(v1,v2,v3) // first ....
+=======================================
+skip array elemnent while destructuring 
+
+let arr=['first','second','third'];
+const [v1, ,v3]=arr  // destructure
+console.log(v1,v3) // first , third
+
+======================================
+take first element and rest data in array 
+
+let arr=['first','second','third'];
+const [v1,...data]=arr  // destructure
+console.log(v1,data) // first , ['second','third']
+
+

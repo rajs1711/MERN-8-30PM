@@ -1,0 +1,74 @@
+condiition
+=====================
+Problem statment : if user age is > 18 then print user
+access allowed otherwise no access . 
+if user age is greater than 50 then enrter in safe mode
+
+Js:
+===================
+*IF- ELSE
+
+let age=23;
+
+if(age > 50){
+    console.log('access allowed in safe mode');
+}else if(age>18){
+    console.log('access allowed ');
+}else{
+    console.log('access denied');
+}
+
+short
+if( age> 50) console.log('access allowed in safe mode');
+
+====================================================
+
+* Ternary Operator:
+
+condition ? true statmenet : false statement
+let age=23;
+let output=age >18 ? 'allowed':'access denied';
+console.log(output)
+
+Multiple ternary operator condition
+
+let age=30
+let output= (age>50)?'safe mode': (age>18)?'access alowed':'access denied'
+console.log(output)
+
+==========================
+
+
+ * Nullish collescing operator
+ ??
+
+ let data=null; 
+ let result= (data !==null && data !==undefined) ? data :'No value';
+ console.log(result);
+
+ let result= data??"in-correct"
+ console.log(result);
+
+ ====================================
+ Chaining
+ ?.
+
+
+ let person={
+    name:'Saurav',
+    email:'srvv@gmail.com',
+    address:{
+        temporary:'Guwahati',
+        permanent:'Patna'
+    }
+ }
+
+ console.log(person.address.temporary);//Guwahati
+  console.log(person.contact?.mobile);// error
+ console.log(person.contact?.mobile);//undefined
+
+ we use chaining to verify  parent key is avilable or not
+ if parent key is avilable then only we will try to access
+ child key otherwise it will return undefined.
+
+ Note: it helps to mimizie error .

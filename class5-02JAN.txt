@@ -1,0 +1,111 @@
+Object:
+================================
+Object: Copy By reference
+
+ let user={
+    name:"saurav',
+    email:"raj@gmail.com'
+ }
+
+ let user2= user; // copy by reference
+ user2.mobile=9709997286
+ console.log('This is user2',user2); // 
+ console.log('This is user1',user);
+
+
+ console.log(user2);//{name: 'saurav', email: 'raj@gmail.com', mobile: 9709997286}
+ console.log(user);//{name: 'saurav', email: 'raj@gmail.com', mobile: 9709997286}
+
+ Note: Here we can see both object (user and user2) have same data . because when we copy object the copied
+ object work on Refernce. so if we update any property in user2 it will impact on user1.
+
+ Note: in JS  == compare operands on the  basis of value 
+              === compare both value and datatype 
+              (
+                let a=1;
+                let b='1';
+                console.log(a==b) // true   (same value)
+                console.log(a===b) // false ( same value diff. datatype)
+
+              )
+
+              so when we compare copied reference object using === it
+              returns true  , beacuse of reference.
+              example 
+              console.log(user === user2); // true
+
+ Note: let x1={name:'raj'}
+       let x2={name:'raj'}
+       console.log(x1===x2) // false  beacuse both have different address
+
+
+======================================
+Object: Copy by Value
+
+let user={
+    name:'saurav',
+    mobile:8988998
+}
+
+let userclone=Object.assign({},user);
+console.log(user);
+console.log(userclone);
+
+userclone.age=20;
+console.log('user',user);
+console.log('userclone',userclone);
+
+================================
+How to run a loop in Object
+=============================
+ We have to use for-in loop 
+
+let user={
+    name:'saurav',
+    mobile:8988998
+}
+for (let data in user){
+    console.log(data +':'+userclone[data]);
+}
+name:saurav
+mobile:8988998
+
+==================================================
+How to use Multiword key in Object
+
+let user={} // empty object 
+
+user.name='saurav';  
+user['permanent address']='patna' // multiword key 
+
+=====================================================
+How to user variable as key 
+ scenario: our object key is stored in database user table
+ key    value
+ ===     ====
+ name     saurav
+ userage  18
+ address  ...
+
+let user={};  // empty object
+
+let key2='userage'; // let suppose this value comes from database
+let myval=18 // let suppose value also comes from DB
+
+user[key2]= myval // asignment
+
+console.log(user);
+console.log(user[key2]);// 18.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+

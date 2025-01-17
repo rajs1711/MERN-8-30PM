@@ -1,0 +1,98 @@
+=====================================
+function => 
+
+human =leg 
+
+user purchase > 5000 and wo user premium user 
+
+delivery free
+
+
+let deliveryCharge=checkUserDelivery(101,4000);
+
+function checkUserDelivery(userid,ordermaount){
+    let delivery;
+    if(userid=='premium'){
+          if(orderamount > 5000){
+              delivery=0;
+             return delivery
+          }else{
+            delivery = 100;
+          }
+    }else{
+        delivery = 100;
+    }
+}
+
+
+=============================================
+Javascirpt function :  3 ways 
+               1.function declatrion
+               2.function expression
+               3.Arrow function
+
+==========
+function declration=>
+
+Printlabel(2500)// call
+
+function Printlabel(orderamount){
+     return 'Your order amount'+orderamount;
+}
+
+Printlabel(2500)// call
+
+
+
+
+function expression =>
+
+sucess_message(4000); // call  => error
+
+
+
+let sucess_message = function (orderamount){
+
+    return 'Your order amount'+orderamount;
+}
+
+sucess_message(4000); // call
+
+Note: we can call regular function before it's defination while function
+      expression can only call after it's defination.
+      beacuse JS treat function expression like variable and we know we can
+      not call a variable before its declartion.
+
+
+if(true){
+
+    function test1(){
+        return 'hello';
+    }
+}
+
+
+=============================
+Arrow function
+
+let test1=(a,b)=>{
+    return a+b;
+}
+
+single paramater arrow function
+
+let test1=(a,b)=> {
+    return a+b
+}
+
+test1()
+
+let myfuct=
+app.listen(PORT,() => {
+  console.log("Server Listening on PORT:", port);
+} );
+
+
+
+
+

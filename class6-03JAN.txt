@@ -1,0 +1,83 @@
+Object
+===================
+Method under a object
+
+let user={
+    name:'saurav',
+    printName:function(){ // this is how we define a function within a object
+        console.log(this.name)
+    }
+}
+
+
+user.printName() // calling function 
+
+
+
+================================================
+2nd way to create object in javacript 
+
+using new operator
+
+function userDetail(name,email,mobile){
+
+    this.name=name,
+    this.email=email,
+    this.mobile=mobile,
+    this.printDetal=function(){
+        console.log(this.name + ' ' + this.email + ' '+this.mobile)
+    }
+}
+
+let user1= new userDetail('saurav','raj@gmail.com',89899)
+let user2= new userDetail('gaurav','gg@gmail.com',90900);
+
+user2.printDetail()
+
+==================================
+Note: Template lietrals
+
+
+Old styel to concatinate string  and variable 
+
+let name   ='Amit'
+let address='Patna'
+
+console.log( name + ' permanent address is ' + address)
+
+====In ECMA6 we have Template literal====\
+let name   ='Amit'
+let address='Patna'
+console.log(`${name} permanent address is ${address}`)
+
+
+==============================================
+
+Array:
+
+let arr=['Amit',22,true,'Suraj'];
+
+console.log(arr[1]);
+
+arr.push('prince'); // add element in last 
+arr.pop() // remove from last 
+arr.unshift();//add element in begining
+arr.shift();// remove element from begining.
+
+===How to run loop over the Array==
+
+for (let i=0 ; i<arr.length;i++){
+     console.log(arr[i])
+}
+for (let data of arr){  // use to run loop over array 
+    console.log(data)
+}
+=============================================
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+=====  Javascript Modules =========
+
+As our programme size grow , it contains many lines of 
+code , rather than keeping everything in a single file , we
+can use the concept of modules.
+
+By the help of modules you can seperate your code a/c to
+functionalities in multiple file.
+
+Benifit:  Organized , Easy to Maintain , Less Buggy . 
+
+Note: we can have only one deafult export in a file.
+      the method which is deafult exported can import in anothe file 
+      by any random name and with out curly 
+      
+
+ES6 : module  => react 
+common js : node js => but node js module
+
